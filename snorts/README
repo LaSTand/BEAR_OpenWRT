@@ -1,0 +1,13 @@
+# README
+
+These files are related with snort
+
+'snort' files is excutable file that for UCI module of snort.
+
+'snort.conf' file is UCI configure file which refered to snort UCI module when user control snort by users.
+
+'snort.script' is snort init script. This file must put in '/etc/init.d/'
+
+'snort_rule' is snort rule control UCI module, which control snort rule(local.rules)
+
+'snort_rule.conf' is configure file for UCI rule control module.

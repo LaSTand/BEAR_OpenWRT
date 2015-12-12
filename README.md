@@ -4,7 +4,7 @@ Info.
 
 Best of the Best 4th BEAR project.
 
-OpenWRT
+OpenWRT 14.07(barrier_breaker)
 
  Hardware : Mikrotik Routerboard450G(MIPS32)
 

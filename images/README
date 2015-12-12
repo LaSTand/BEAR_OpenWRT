@@ -1,0 +1,10 @@
+# These files are build by OpenWRT buildroot
+
+'~.initramfs.elf'
+ -> Use for first boot of Routerboot(PXE)
+
+'~vmlinux.elf'
+ -> kernel file. This file must be mounted on kernel region.(#cat /proc/mtd)
+
+'~rootfs.tar.gz'
+ -> root file system archive file. This file must unzip on rootfs region(#cat /proc/mtd)

@@ -1,0 +1,143 @@
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:55.930599 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9212 IpLen:20 DgmLen:180 DF
+***AP*** Seq: 0x7A1D4034  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294963982 84292532
+
+[**] [1:5:0] icmp in packet!! [**]
+[Priority: 0]
+10/23-19:52:59.979665 192.168.1.2 -> 192.168.1.1                       
+ICMP TTL:64 TOS:0x0 ID:60363 IpLen:20 DgmLen:84 DF                     
+Type:8  Code:0  ID:23811   Seq:2  ECHO 
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.937396 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9243 IpLen:20 DgmLen:148 DF
+***AP*** Seq: 0x7A1D56E4  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964083 84292784
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.945054 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9257 IpLen:20 DgmLen:164 DF
+***AP*** Seq: 0x7A1D5C74  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964084 84292786
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.946893 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9261 IpLen:20 DgmLen:148 DF
+***AP*** Seq: 0x7A1D5E14  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964084 84292786
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.950830 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9269 IpLen:20 DgmLen:164 DF
+***AP*** Seq: 0x7A1D6144  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964084 84292787
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.952732 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9273 IpLen:20 DgmLen:148 DF
+***AP*** Seq: 0x7A1D62E4  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964085 84292787
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]
+10/23-19:52:56.959863 192.168.1.1:22 -> 192.168.1.2:56691
+TCP TTL:64 TOS:0x10 ID:9284 IpLen:20 DgmLen:148 DF
+***AP*** Seq: 0x7A1D6A14  Ack: 0x8FD860F4  Win: 0x389  TcpLen: 32
+TCP Options (3) => NOP NOP TS: 4294964085 84292789
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:57.992883 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9317 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1DCC84  Ack: 0x8FD86124  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964189 84293048                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:57.996738 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9324 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1DCF54  Ack: 0x8FD86124  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964189 84293049                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:57.999933 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9331 IpLen:20 DgmLen:164 DF                     
+***AP*** Seq: 0x7A1DD214  Ack: 0x8FD86124  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964189 84293050                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:58.006587 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9344 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1DD754  Ack: 0x8FD86124  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964190 84293051                     
+
+[**] [1:5:0] icmp in packet!! [**]                                     
+[Priority: 0]                                                          
+10/23-19:52:58.977855 192.168.1.2 -> 192.168.1.1                       
+ICMP TTL:64 TOS:0x0 ID:60331 IpLen:20 DgmLen:84 DF                     
+Type:8  Code:0  ID:23811   Seq:1  ECHO                                 
+
+[**] [1:4:0] icmp out packet!! [**]                              
+[Priority: 0]                                                          
+10/23-19:52:58.977855 192.168.1.2 -> 192.168.1.1                       
+ICMP TTL:64 TOS:0x0 ID:60331 IpLen:20 DgmLen:84 DF                     
+Type:8  Code:0  ID:23811   Seq:1  ECHO                                 
+
+[**] [1:5:0] icmp in packet!! [**]                                     
+[Priority: 0]                                                    
+10/23-19:52:58.978037 192.168.1.1 -> 192.168.1.2                       
+ICMP TTL:64 TOS:0x0 ID:16888 IpLen:20 DgmLen:84                        
+Type:0  Code:0  ID:23811  Seq:1  ECHO REPLY
+
+[**] [1:4:0] icmp out packet!! [**]                                    
+[Priority: 0]                                                          
+10/23-19:52:58.978037 192.168.1.1 -> 192.168.1.2                       
+ICMP TTL:64 TOS:0x0 ID:16888 IpLen:20 DgmLen:84                        
+Type:0  Code:0  ID:23811  Seq:1  ECHO REPLY                            
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:58.988359 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9377 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1E20F4  Ack: 0x8FD86124  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964288 84293297                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:59.953759 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9444 IpLen:20 DgmLen:164 DF                     
+***AP*** Seq: 0x7A1EA234  Ack: 0x8FD86154  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964385 84293538                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:59.957857 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9452 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1EA574  Ack: 0x8FD86154  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964385 84293539                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:59.977046 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9471 IpLen:20 DgmLen:164 DF                     
+***AP*** Seq: 0x7A1ED1C4  Ack: 0x8FD86154  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964387 84293544                     
+
+[**] [129:12:1] Consecutive TCP small segments exceeding threshold [**]
+[Classification: Potentially Bad Traffic] [Priority: 2]                
+10/23-19:52:59.978980 192.168.1.1:22 -> 192.168.1.2:56691              
+TCP TTL:64 TOS:0x10 ID:9475 IpLen:20 DgmLen:148 DF                     
+***AP*** Seq: 0x7A1ED364  Ack: 0x8FD86154  Win: 0x389  TcpLen: 32      
+TCP Options (3) => NOP NOP TS: 4294964387 84293544                     
+                                                                       
+

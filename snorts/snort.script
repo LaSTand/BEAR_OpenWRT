@@ -1,0 +1,30 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2012 OpenWrt.org
+
+START=99
+APP=snort.bin
+BIN_FILE="/usr/bin/"$APP
+PID_FILE="/var/run/"$APP"_"$INTERFACE".pid"
+OPTIONS="--daq-dir /usr/lib/daq/"
+DEFAULT=/etc/default/snort
+ADD_OPTION="-v -c /tmp/snort.conf -i eth1 -l /mnt/log/snort"
+DEFAULT_OPTION="-v -c /etc/snort/snort.conf -i eth1 -l /mnt/log/snort"
+LOG_D=/mnt/log/snort
+
+start() {
+        [ -d $LOG_D ] || mkdir -p $LOG_D
+        if [ -e /tmp/snort.conf ]; then
+                start-stop-daemon -S -x $APP -p $PID_FILE -b -m -- $OPTIONS $ADD_OPTION
+        else
+                start-stop-daemon -S -x $APP -p $PID_FILE -b -m -- $OPTIONS $DEDAULT_OPTION
+        fi
+}
+
+stop() {
+        start-stop-daemon -K -x $APP -p $PID_FILE -s TERM
+        rm -rf $PID_FILE
+}
+
+restart() {
+
+}

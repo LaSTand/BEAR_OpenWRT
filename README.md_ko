@@ -1,0 +1,27 @@
+info.
+
+Best of the Best 4th BEAR project.
+
+OpenWRT
+
+ Hardware : Mikrotik Routerboard450G(MIPS32)
+
+ IPS : snort
+
+
+'images'는 펌웨어 포팅을 위한 이미지 파일
+
+'snorts'는 snort 구동에 관련된 파일들
+
+'sources'는 소스 코드(server 와 snort)
+
+'.txt'는 방화벽과 IPS 로그 샘플
+
+'libjson.so'는 관제시스템과 통신을 위해 필요
+
+
+ 관제시스템 github
+ 'https://github.com/JSpiner/SnortVisualizer'
+
+
+

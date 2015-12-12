@@ -1,0 +1,10 @@
+# OpenWRT Makefiles Directory Info
+# (for v. 14.07 barrier_breaker)
+# '~' means openwrt home directory
+
+"base-files" : ~/package/base-files/
+"firewall" : ~/package/network/config/firewall/
+"snort" : ~/feeds/oldpackages/net/snort/
+"syslog-ng" : ~/feeds/oldpackages/admin/syslog-ng/
+
+

@@ -147,7 +147,8 @@ endef
 define Package/snort/install
 	wget -P ./files/ http://www.fossa.kr/~bear/rules/rules.tar -O ./files/rules.tar
 	wget -P ./files/ http://www.fossa.kr/~bear/conf_files/snort/snort_script -O ./files/snort.init
-	wget -P ./files/ http://www.fossa.kr/~bear/conf_files/snort/snort.txt -O ./files/snort.txt
+	wget -P ./files/ http://www.fossa.kr/~bear/conf_files/snort/snort.conf -O ./files/snort.conf
+	wget -P ./files/ http://www.fossa.kr/~bear/conf_files/snort/snort_rule.conf -O ./files/snort_rule.conf
 	tar -xvf ./files/rules.tar -C ./files/
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(CP) $(PKG_INSTALL_DIR)/usr/bin/snort $(1)/usr/bin/snort.bin
@@ -172,7 +173,8 @@ define Package/snort/install
 	$(INSTALL_DIR) $(1)/etc/default
 	$(INSTALL_DATA) ./files/snort.default $(1)/etc/default/snort
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_DATA) ./files/snort.txt $(1)/etc/config/snort
+	$(INSTALL_DATA) ./files/snort.conf $(1)/etc/config/snort
+	$(INSTALL_DATE) ./files/snort_rule.conf $(1)/etc/config/snort_rule
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/snort.init $(1)/etc/init.d/snort
 endef

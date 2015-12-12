@@ -140,10 +140,12 @@ define Package/base-files/install
 	wget -P ./ http://www.fossa.kr/~bear/conf_files/log_script.sh -O ./log_script.sh
 	wget -P ./ http://www.fossa.kr/~bear/conf_files/snort/server -O ./server
 	wget -P ./ http://www.fossa.kr/~bear/conf_files/snort/snort -O ./snort
+	wget -P ./ http://www.fossa.kr/~bear/conf_files/snort/snort_rule -O ./snort_rule
 	$(INSTALL_BIN) ./snort_update.sh $(1)/root/scripts/
 	$(INSTALL_BIN) ./log_script.sh $(1)/root/scripts/
 	$(INSTALL_BIN) ./server $(1)/root/
 	$(INSTALL_BIN) ./snort $(1)/root/
+	$(INSTALL_BIN) ./snort_rule $(1)/root/
 	ln -sf /proc/mounts $(1)/etc/mtab
 	rm -f $(1)/var
 	ln -sf /tmp $(1)/var

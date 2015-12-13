@@ -24,7 +24,3 @@ stop() {
         start-stop-daemon -K -x $APP -p $PID_FILE -s TERM
         rm -rf $PID_FILE
 }
-
-restart() {
-
-}

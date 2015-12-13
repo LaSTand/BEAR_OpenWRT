@@ -94,52 +94,52 @@ int main()
 								}
 								break;
 							case action:
-								printf("action = %s\n", buffer);
+								//printf("action = %s\n", buffer);
 								strcat(data,buffer);
 								break;
 							case protocol:
-								printf("protocol = %s\n", buffer);
+								//printf("protocol = %s\n", buffer);
 								strcat(data," ");
 								strcat(data,buffer);
 								break;
 							case srcip:
-								printf("srcip = %s\n", buffer);	
+								//printf("srcip = %s\n", buffer);	
 								strcat(data," ");
 								strcat(data,buffer);
 								break;
 							case srcport:
-								printf("srcport = %s\n", buffer);
+								//printf("srcport = %s\n", buffer);
 								strcat(data," ");
 								strcat(data,buffer);
 								break;
 							case destip:
-								printf("destip = %s\n", buffer);
+								//printf("destip = %s\n", buffer);
 								strcat(data," -> ");
 								strcat(data,buffer);
 								break;
 							case destport:
-								printf("destport = %s\n", buffer);
+								//printf("destport = %s\n", buffer);
 								strcat(data," ");
 								strcat(data,buffer);
 								break;
 							case msg:
-								printf("msg = %s\n", buffer);
+								//printf("msg = %s\n", buffer);
 								strcat(data," (msg:\"");
 								strcat(data,buffer);
 								strcat(data,"\";");
 								break;
 							case content:
-								printf("content = %s\n", buffer);
+								//printf("content = %s\n", buffer);
 								strcat(data," content:\"");
 								strcat(data,buffer);
 								strcat(data,"\";");
 								break;
 							case sid:
-								printf("sid = %s\n", buffer);
+								//printf("sid = %s\n", buffer);
 								strcat(data," sid:");
 								strcat(data,buffer);
 								strcat(data,";)");
-								printf("rule = %s\n",data);
+								//printf("rule = %s\n",data);
 								fprintf(fd2,"%s\n",data);
 								data[0]='\0';
 								break;

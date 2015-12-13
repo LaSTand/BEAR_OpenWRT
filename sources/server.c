@@ -299,11 +299,9 @@ void inoty(void)
 
 		//while ( i < length ) {
 			struct inotify_event *event = ( struct inotify_event * ) &buffer[ i ];
-			printf("Hi!!\n");
 			if ( event->len ) {
 			  if ( event->mask & IN_CLOSE_WRITE )
 			  {
-				printf("hi!!\n");
 				if(write(fifo,fifo_data,strlen(fifo_data))) {
 					perror("inoty fifo error!!");
 					return;
@@ -314,7 +312,6 @@ void inoty(void)
 		//}
 		i=0;
 	}
-	printf("event close!\n");
 	close(fifo);
 	( void ) inotify_rm_watch( fd1, wd );
 	( void ) close( fd1 );
@@ -329,10 +326,8 @@ void check_fw_fifo(int* flag)
 		perror("fw_fifo open error\n");
 		exit(1);
 	}
-	//write(fifo,"fw_fifo start",strlen("fw_fifo start"));
 	while(1) {
 		read(fifo, fifo_data, MAX_LINE);
-        printf("%s, %d\n",fifo_data, *flag);
         *flag=1;
 	}
 	close(fifo);
@@ -350,7 +345,6 @@ void check_fifo(int* flag)
 	//write(fifo,"fifo start",strlen("fifo start"));
 	while(1) {
 		read(fifo, fifo_data, MAX_LINE);
-        printf("%s, %d\n",fifo_data, *flag);
         *flag=1;
 	}
 	close(fifo);
@@ -372,6 +366,8 @@ void fw_output_stream(int sockfd)
 	}
 	
 	fd = fopen("/mnt/log/fw/fwlog","r");
+	//current_cursor = ftell(fd);
+	fseek(fd,0,SEEK_END);
 	
 	data[0]='\0';
     
@@ -391,23 +387,26 @@ void fw_output_stream(int sockfd)
 		line[0]='\0';
 		sleep(1);
 		
-		fgets(line,255,fd);
-		strcat(data,line);
-		strcat(data,"\"}");
-		
-		printf("%s",data);
-		int cc;
-		if((cc=write(sockfd,data,strlen(data)))==-1) {
-			perror("fw_output write error!!");
-			return;
+		if(fgets(line,255,fd)) {
+			if(strlen(line)==0) {continue;}
+			strcat(data,line);
+			strcat(data,"\"}");
+			
+			printf("%s",data);
+			int cc;
+			if(strlen(data)>19) {
+			if((cc=write(sockfd,data,strlen(data)))==-1) {
+				perror("fw_output write error!!");
+				return;
+			}
+			if(read(sockfd,data,MAX_LINE)==0) {
+				perror("input read error!!");
+				return;
+			}}
+			printf("%d\n",cc);
+			data[0]='\0';
+			strcpy(data,"{\"type\":6,\"raw\":\"");
 		}
-		if(read(sockfd,data,MAX_LINE)==0) {
-			perror("input read error!!");
-			return;
-		}
-		printf("%d\n",cc);
-		data[0]='\0';
-		strcpy(data,"{\"type\":6,\"raw\":\"");
 
 	}
 	pthread_join(thread,NULL);
@@ -428,6 +427,8 @@ void output_stream(int sockfd)
     char data[MAX_LINE];
 
 	fd = fopen("/mnt/log/snort/alert","r");
+	//current_cursor = ftell(fd);
+	fseek(fd,0,SEEK_END);
 	
 	if(pthread_create(&thread,NULL,(void*)check_fifo,&fifo_flag)!=0)
 	{
@@ -460,28 +461,14 @@ void output_stream(int sockfd)
 		switch(i)
 		{
 			case 1:
-				while(1)
+				while(fgets(line,255,fd))
 				{
-					if(!fgets(line,255,fd)) {
-						strcat(data,"\"}");
-						printf("%s",data);
-						printf("%d\n",strlen(data));
-						if(write(sockfd,data,strlen(data))==-1) {
-							perror("output wrtie error!!");
-							return;
-						}
-						if(read(sockfd,data,MAX_LINE)==0) {
-							perror("input read error!!");
-							return;
-						}
-						data[0]='\0';
-						strcpy(data,"{\"type\":1,\"raw\":\"");
-						break;
-					}
+					if(strlen(line)==0) { break;}
 					if(line[0]=='\n') {		
 						strcat(data,"\"}");
 						printf("%s",data);
 						printf("%d\n",strlen(data));
+						if(strlen(data)>19) {
 						if(write(sockfd,data,strlen(data))==-1) {
 							perror("output wrtie error!!");
 							return;
@@ -489,7 +476,7 @@ void output_stream(int sockfd)
 						if(read(sockfd,data,MAX_LINE)==0) {
 							perror("input read error!!");
 							return;
-						}					
+						}}					
 						data[0]='\0';
 						strcpy(data,"{\"type\":1,\"raw\":\"");
 						break;
